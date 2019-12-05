@@ -1,15 +1,16 @@
 <template>
   <div class="app-wrapper">
-    <side-bar class="sidebar"></side-bar>
-    <div class="main"></div>
+    <side-bar class="siderbar"></side-bar>
+    <app-main class="main"></app-main>
   </div>
 </template>
 
 <script>
 import SideBar from "./components/sidebar/SideBar"
+import AppMain from './components/AppMain'
 export default {
     components:{
-        SideBar
+        SideBar,AppMain
     }
 };
 </script>
@@ -26,6 +27,7 @@ export default {
   .siderbar {
     width: $sideBarWidth;
     height: 100%;
+    background: $menuBg;
   }
   .main {
     width: calc(100% - #{$sideBarWidth});
